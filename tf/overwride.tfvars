@@ -1,4 +1,5 @@
-project = "vault-20160301"
+# Use your own PROJECT ID
+google_project_id = "ha-demo-20160303"
 machine_type = "n1-standard-1"
 node_count = 3
 

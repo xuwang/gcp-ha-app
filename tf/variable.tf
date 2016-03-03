@@ -1,5 +1,7 @@
-variable "project" { 
-    default = "vault-20160301"
+
+# Use your own PROJECT ID
+variable "google_project_id" { 
+    default = "ha-demo-20160303"
 }
 
 variable "account_file" {

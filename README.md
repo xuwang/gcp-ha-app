@@ -120,6 +120,9 @@ google_compute_instance.www.2: Destruction complete
 
 Apply complete! Resources: 0 added, 0 changed, 8 destroyed.
 ```
+## Autoscaling Groups and Content-Based Load Balancing
+
+An example of using Google Compute **Managed Autoscaling** and **HTTP Load Balancing** is in _tf-autoscaling_ dir.
 
 [virtualbox]: https://www.virtualbox.org/
 [vagrant]: https://www.vagrantup.com/downloads.html

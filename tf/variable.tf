@@ -1,7 +1,8 @@
 
 # Use your own PROJECT ID
 variable "google_project_id" { 
-    default = "ha-demo-20160303"
+    #default = "ha-demo-20160303"
+    default = "vault-20160301"
 }
 
 variable "account_file" {
@@ -49,5 +50,9 @@ variable "machine_type" {
 }
 
 variable "node_count" {
-    default = 3
+    default = 1
+}
+
+variable "vpn_shared_secret" {
+    default = "top!secret@net"
 }

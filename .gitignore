@@ -1,6 +1,7 @@
 account.json
 *.pem
 *.key
+*.jpg
 .DS_Store
 .git
 .terraform

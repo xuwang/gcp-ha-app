@@ -47,7 +47,7 @@ coreos:
         Environment="AUTH_URL=http://metadata/computeMetadata/v1/instance/service-accounts/default/token"
         Environment="OBJECT_URL=https://www.googleapis.com/storage/v1/b/ha-demo-bucket/o/app-image?alt=media"
         Environment="DES_DIR=/var/lib/apps/nodeapp"
-        ExecStart=/bin/bash -c "mkdir -p $DES_DIR ; \
+        ExecStart=-/bin/bash -c "mkdir -p $DES_DIR ; \
           token=$(curl -s -H 'Metadata-Flavor: Google' $AUTH_URL | jq '.access_token' -r) ; \
           curl -s -H \"Authorization: Bearer $token\" -o $DES_DIR/app-image.jpg $OBJECT_URL"
     - name: nodeapp.service

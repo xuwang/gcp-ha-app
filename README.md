@@ -64,7 +64,7 @@ This file is downloaded directly from the [Google Project Console][gProject]:
 
 ## Provision HaDemo on Google Cloud
 ```shell
-$ git clone https://github.com/xuwang/ha-app-gcloud
+$ git clone https://github.com/xuwang/ha-app-gcp
 $ cp account.json ha-app-gcloud/tf/
 $ cd ha-app-gcloud/tf
 ```

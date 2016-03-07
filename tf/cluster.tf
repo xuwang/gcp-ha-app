@@ -7,9 +7,17 @@ resource "google_compute_instance" "www" {
     # servers in different zones
     zone = "${lookup(var.zones, concat("zone", count.index))}"
     tags = ["www-server"]
+    depends_on = ["google_compute_disk.docker"]
 
     disk {
         image = "${var.image}"
+    }
+
+    // External disk
+    disk {
+        device_name = "docker"
+        disk = "docker-${count.index+1}"
+        auto_delete = false
     }
 
     network_interface {
@@ -27,6 +35,14 @@ resource "google_compute_instance" "www" {
     service_account {
         scopes = ["userinfo-email", "compute-ro", "storage-ro"]
     }
+}
+
+resource "google_compute_disk" "docker" {
+    count = "${var.node_count}"
+    name = "docker-${count.index+1}"
+    type = "pd-ssd"
+    zone = "${lookup(var.zones, concat("zone", count.index))}"
+    size = 50
 }
 
 

@@ -65,8 +65,8 @@ This file is downloaded directly from the [Google Project Console][gProject]:
 ## Provision HaDemo on Google Cloud
 ```shell
 $ git clone https://github.com/xuwang/gcp-ha-app.git
-$ cp account.json ha-app-gcloud/tf/
-$ cd ha-app-gcloud/tf
+$ cp account.json gcp-ha-app/tf/
+$ cd gcp-ha-app/tf
 ```
 **Note:** You should check default values defined in **tf/variables.tf** and make modification to fit your own case, e.g. use your own **`google_project_id`** instead of the default _`ha-demo-20160303`_.
 

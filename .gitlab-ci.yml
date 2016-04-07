@@ -1,0 +1,6 @@
+test:
+  tags:
+    - shell
+  script:
+    - echo hello world
+    
